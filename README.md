@@ -15,7 +15,7 @@ Requirements:
 - Compiled on Xcode: 15.0.1
 - Tested on: iOS 17.0
 
-Node : 
+Note : 
 - Please check the signing certificate if the code does not build and try clean build folder.
 - try Running on device for more smooth experience
 - if running on device then check the signing certificate and unique identifier, if available or not.
