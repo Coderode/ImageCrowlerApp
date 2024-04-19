@@ -8,7 +8,7 @@
 import Foundation
 import UIKit
 
-class ImageCrowlerAPIService {
+class ImageCrowlerAPIServiceDefaultImpl : ImageCrowlerAPIService {
     private var apiService = APIFetchServiceImpl<FeedDataModel>()
     func fetchFeeds(offset: Int, limit: Int = 100) async throws -> FeedDataModel {
         let url = URL(string: "https://acharyaprashant.org/api/v2/content/misc/media-coverages")!

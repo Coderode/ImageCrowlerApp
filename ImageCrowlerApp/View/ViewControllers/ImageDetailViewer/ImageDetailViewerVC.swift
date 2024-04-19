@@ -63,6 +63,6 @@ class ImageDetailViewerVC: UIViewController {
         let thumbnail = data.thumbnail
         let urlString = "\(thumbnail.domain)/\(thumbnail.basePath)/0/\(thumbnail.key)"
         let url = URL(string: urlString)!
-        self.imageView.loadImage(url: url)
+        _ = self.imageView.loadImage(url: url)
     }
 }

@@ -28,7 +28,6 @@ class ImageCrowlerVC: UIViewController {
         self.viewModel.fetchFeeds()
     }
     
-    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         self.navigationItem.setHidesBackButton(true, animated: false)
@@ -38,7 +37,7 @@ class ImageCrowlerVC: UIViewController {
     
     class func `init`() -> UIViewController {
         let vc = ImageCrowlerVC()
-        vc.viewModel = ImageCrowlerVM(apiService: ImageCrowlerAPIService())
+        vc.viewModel = ImageCrowlerVM(apiService: ImageCrowlerAPIServiceDefaultImpl())
         return vc
     }
     
@@ -135,7 +134,6 @@ extension ImageCrowlerVC {
         let navigationBarHeight = self.navigationController?.navigationBar.frame.height ?? 0
         let topSafeArea = statusBarHeight + (view.window?.safeAreaInsets.top ?? 0)
         let bottomSafeArea = view.window?.safeAreaInsets.bottom ?? 0
-        let collectionViewFrame = CGRect(x: 0, y: topSafeArea + navigationBarHeight, width: view.bounds.width, height: view.bounds.height - topSafeArea - navigationBarHeight - bottomSafeArea)
         
         let layout: UICollectionViewFlowLayout = UICollectionViewFlowLayout()
         layout.scrollDirection = .vertical
@@ -146,14 +144,19 @@ extension ImageCrowlerVC {
         let width = (view.frame.width - 6) / 3
         layout.itemSize = CGSize(width: width, height: width)
         
-        collectionView = UICollectionView(frame: collectionViewFrame, collectionViewLayout: layout)
+        collectionView = UICollectionView(frame: .zero, collectionViewLayout: layout)
+        self.view.addSubview(collectionView)
+        collectionView.translatesAutoresizingMaskIntoConstraints = false
+        collectionView.leftAnchor.constraint(equalTo: self.view.leftAnchor, constant: 0).isActive = true
+        collectionView.rightAnchor.constraint(equalTo: self.view.rightAnchor, constant: 0).isActive = true
+        collectionView.bottomAnchor.constraint(equalTo: self.view.bottomAnchor, constant: bottomSafeArea).isActive = true
+        collectionView.topAnchor.constraint(equalTo: self.view.topAnchor, constant: topSafeArea + navigationBarHeight).isActive = true
         collectionView.dataSource = self
         collectionView.delegate = self
         collectionView.register(ImageCrowlerGridCVC.self, forCellWithReuseIdentifier: "\(ImageCrowlerGridCVC.self)")
         collectionView.register(PaginationLoaderFooterView.self, forSupplementaryViewOfKind: UICollectionView.elementKindSectionFooter, withReuseIdentifier: "\(PaginationLoaderFooterView.self)")
         collectionView.showsVerticalScrollIndicator = false
         collectionView.backgroundColor = UIColor.gray
-        self.view.addSubview(collectionView)
         refreshControl = UIRefreshControl()
         refreshControl.addTarget(self, action: #selector(refreshData), for: .valueChanged)
         collectionView.refreshControl = refreshControl

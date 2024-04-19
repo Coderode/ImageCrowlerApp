@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9AC9A51F2BD246C9006EA5C8 /* ImageCrowlerAPIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AC9A51E2BD246C9006EA5C8 /* ImageCrowlerAPIService.swift */; };
 		9AE9E3AE2BCEF069002BAF5C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AE9E3AD2BCEF069002BAF5C /* AppDelegate.swift */; };
 		9AE9E3B02BCEF069002BAF5C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AE9E3AF2BCEF069002BAF5C /* SceneDelegate.swift */; };
 		9AE9E3B52BCEF069002BAF5C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9AE9E3B32BCEF069002BAF5C /* Main.storyboard */; };
@@ -52,6 +53,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		9AC9A51E2BD246C9006EA5C8 /* ImageCrowlerAPIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCrowlerAPIService.swift; sourceTree = "<group>"; };
 		9AE9E3AA2BCEF069002BAF5C /* ImageCrowlerApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ImageCrowlerApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9AE9E3AD2BCEF069002BAF5C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9AE9E3AF2BCEF069002BAF5C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -115,6 +117,15 @@
 				9AEA566C2BD0E660003D2955 /* ImageDetailViewer */,
 			);
 			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		9AC9A51D2BD246AC006EA5C8 /* ImageCrowler */ = {
+			isa = PBXGroup;
+			children = (
+				9AEA56512BD02C7A003D2955 /* ImageCrowlerAPIServiceImpl.swift */,
+				9AC9A51E2BD246C9006EA5C8 /* ImageCrowlerAPIService.swift */,
+			);
+			path = ImageCrowler;
 			sourceTree = "<group>";
 		};
 		9AE9E3A12BCEF069002BAF5C = {
@@ -183,8 +194,8 @@
 		9AE9E3E22BCEF2D2002BAF5C /* Networking */ = {
 			isa = PBXGroup;
 			children = (
+				9AC9A51D2BD246AC006EA5C8 /* ImageCrowler */,
 				9AEA564F2BD02A9B003D2955 /* APIService.swift */,
-				9AEA56512BD02C7A003D2955 /* ImageCrowlerAPIServiceImpl.swift */,
 				9AEA56652BD0E060003D2955 /* ErrorResponse.swift */,
 				9AEA56672BD0E1F8003D2955 /* ReachabilityManager.swift */,
 			);
@@ -429,6 +440,7 @@
 				9AEA565D2BD04618003D2955 /* UIImageView+ImageLoading.swift in Sources */,
 				9AEA56592BD042D7003D2955 /* ImageCacheManager.swift in Sources */,
 				9AEA56572BD041C9003D2955 /* ImageLoadManager.swift in Sources */,
+				9AC9A51F2BD246C9006EA5C8 /* ImageCrowlerAPIService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
