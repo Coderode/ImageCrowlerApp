@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9A11ACBA2BD2F0F100C489F8 /* ImageCrowlerVC+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A11ACB92BD2F0F100C489F8 /* ImageCrowlerVC+extension.swift */; };
 		9AC9A51F2BD246C9006EA5C8 /* ImageCrowlerAPIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AC9A51E2BD246C9006EA5C8 /* ImageCrowlerAPIService.swift */; };
 		9AE9E3AE2BCEF069002BAF5C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AE9E3AD2BCEF069002BAF5C /* AppDelegate.swift */; };
 		9AE9E3B02BCEF069002BAF5C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AE9E3AF2BCEF069002BAF5C /* SceneDelegate.swift */; };
@@ -29,7 +30,7 @@
 		9AEA565D2BD04618003D2955 /* UIImageView+ImageLoading.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AEA565C2BD04618003D2955 /* UIImageView+ImageLoading.swift */; };
 		9AEA56602BD04BCE003D2955 /* ImageDetailViewerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AEA565F2BD04BCE003D2955 /* ImageDetailViewerVC.swift */; };
 		9AEA56622BD05375003D2955 /* UINavigation+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AEA56612BD05375003D2955 /* UINavigation+extension.swift */; };
-		9AEA56642BD0D93F003D2955 /* PaginationLoaderFooterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AEA56632BD0D93F003D2955 /* PaginationLoaderFooterView.swift */; };
+		9AEA56642BD0D93F003D2955 /* PaginationLoaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AEA56632BD0D93F003D2955 /* PaginationLoaderView.swift */; };
 		9AEA56662BD0E060003D2955 /* ErrorResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AEA56652BD0E060003D2955 /* ErrorResponse.swift */; };
 		9AEA56682BD0E1F8003D2955 /* ReachabilityManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AEA56672BD0E1F8003D2955 /* ReachabilityManager.swift */; };
 		9AEA566B2BD0E327003D2955 /* AppToast.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AEA566A2BD0E327003D2955 /* AppToast.swift */; };
@@ -53,6 +54,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		9A11ACB92BD2F0F100C489F8 /* ImageCrowlerVC+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ImageCrowlerVC+extension.swift"; sourceTree = "<group>"; };
 		9AC9A51E2BD246C9006EA5C8 /* ImageCrowlerAPIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCrowlerAPIService.swift; sourceTree = "<group>"; };
 		9AE9E3AA2BCEF069002BAF5C /* ImageCrowlerApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ImageCrowlerApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9AE9E3AD2BCEF069002BAF5C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -79,7 +81,7 @@
 		9AEA565C2BD04618003D2955 /* UIImageView+ImageLoading.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+ImageLoading.swift"; sourceTree = "<group>"; };
 		9AEA565F2BD04BCE003D2955 /* ImageDetailViewerVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageDetailViewerVC.swift; sourceTree = "<group>"; };
 		9AEA56612BD05375003D2955 /* UINavigation+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UINavigation+extension.swift"; sourceTree = "<group>"; };
-		9AEA56632BD0D93F003D2955 /* PaginationLoaderFooterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaginationLoaderFooterView.swift; sourceTree = "<group>"; };
+		9AEA56632BD0D93F003D2955 /* PaginationLoaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaginationLoaderView.swift; sourceTree = "<group>"; };
 		9AEA56652BD0E060003D2955 /* ErrorResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorResponse.swift; sourceTree = "<group>"; };
 		9AEA56672BD0E1F8003D2955 /* ReachabilityManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReachabilityManager.swift; sourceTree = "<group>"; };
 		9AEA566A2BD0E327003D2955 /* AppToast.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppToast.swift; sourceTree = "<group>"; };
@@ -261,6 +263,7 @@
 			children = (
 				9AE9E3EA2BCEF330002BAF5C /* ImageCrowlerVC.swift */,
 				9AE9E3EC2BCEF37D002BAF5C /* ImageCrowlerVM.swift */,
+				9A11ACB92BD2F0F100C489F8 /* ImageCrowlerVC+extension.swift */,
 			);
 			path = ImageCrowler;
 			sourceTree = "<group>";
@@ -269,7 +272,7 @@
 			isa = PBXGroup;
 			children = (
 				9AE9E3EF2BCEF56E002BAF5C /* ImageCrowlerGridCVC.swift */,
-				9AEA56632BD0D93F003D2955 /* PaginationLoaderFooterView.swift */,
+				9AEA56632BD0D93F003D2955 /* PaginationLoaderView.swift */,
 			);
 			path = CustomReusableViews;
 			sourceTree = "<group>";
@@ -422,7 +425,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9AE9E3F02BCEF56E002BAF5C /* ImageCrowlerGridCVC.swift in Sources */,
-				9AEA56642BD0D93F003D2955 /* PaginationLoaderFooterView.swift in Sources */,
+				9AEA56642BD0D93F003D2955 /* PaginationLoaderView.swift in Sources */,
 				9AEA56502BD02A9B003D2955 /* APIService.swift in Sources */,
 				9AEA566B2BD0E327003D2955 /* AppToast.swift in Sources */,
 				9AEA56522BD02C7A003D2955 /* ImageCrowlerAPIServiceImpl.swift in Sources */,
@@ -437,6 +440,7 @@
 				9AE9E3AE2BCEF069002BAF5C /* AppDelegate.swift in Sources */,
 				9AE9E3B02BCEF069002BAF5C /* SceneDelegate.swift in Sources */,
 				9AEA56682BD0E1F8003D2955 /* ReachabilityManager.swift in Sources */,
+				9A11ACBA2BD2F0F100C489F8 /* ImageCrowlerVC+extension.swift in Sources */,
 				9AEA565D2BD04618003D2955 /* UIImageView+ImageLoading.swift in Sources */,
 				9AEA56592BD042D7003D2955 /* ImageCacheManager.swift in Sources */,
 				9AEA56572BD041C9003D2955 /* ImageLoadManager.swift in Sources */,
@@ -621,7 +625,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_IDENTITY = "Apple Development";
-				CODE_SIGN_STYLE = Manual;
+				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = "";
 				GENERATE_INFOPLIST_FILE = YES;
@@ -652,7 +656,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_IDENTITY = "Apple Development";
-				CODE_SIGN_STYLE = Manual;
+				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = "";
 				GENERATE_INFOPLIST_FILE = YES;

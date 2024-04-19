@@ -8,7 +8,7 @@
 import Foundation
 import UIKit
 
-class PaginationLoaderFooterView: UICollectionReusableView {
+class PaginationLoaderView: UIView {
     let activityIndicatorView: UIActivityIndicatorView = {
         let activityIndicatorView = UIActivityIndicatorView(style: .medium)
         activityIndicatorView.translatesAutoresizingMaskIntoConstraints = false
@@ -16,7 +16,7 @@ class PaginationLoaderFooterView: UICollectionReusableView {
         activityIndicatorView.tintColor = .black
         return activityIndicatorView
     }()
-    
+    var heightConstraint: NSLayoutConstraint?
     override init(frame: CGRect) {
         super.init(frame: frame)
         setupViews()
@@ -34,13 +34,20 @@ class PaginationLoaderFooterView: UICollectionReusableView {
             activityIndicatorView.centerXAnchor.constraint(equalTo: centerXAnchor),
             activityIndicatorView.centerYAnchor.constraint(equalTo: centerYAnchor)
         ])
+        let heightConstraint = self.heightAnchor.constraint(equalToConstant: 50)
+        heightConstraint.isActive = true
+        self.heightConstraint = heightConstraint
     }
     
     func startAnimating() {
+        self.heightConstraint?.constant = 50
+        self.layoutIfNeeded()
         activityIndicatorView.startAnimating()
     }
     
     func stopAnimating() {
+        self.heightConstraint?.constant = 0
+        self.layoutIfNeeded()
         activityIndicatorView.stopAnimating()
     }
 }

@@ -9,11 +9,11 @@ import Foundation
 import UIKit
 
 extension UIView {
-    func showLoader() {
+    func showLoader(_ color: UIColor = .gray) {
         self.removeLoader()
         DispatchQueue.main.async {
             let loader = UIActivityIndicatorView(style: .medium)
-            loader.color = .gray
+            loader.color = color
             loader.translatesAutoresizingMaskIntoConstraints = false
             loader.startAnimating()
             

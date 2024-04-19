@@ -39,9 +39,6 @@ fileprivate class ImageLoadOperation: Operation {
         }
         // first get from cache
         if let image = ImageCacheManager.shared.getImage(forKey: url.absoluteString) {
-            if isCancelled {
-                return
-            }
             completion(image)
         }
         if isCancelled {
